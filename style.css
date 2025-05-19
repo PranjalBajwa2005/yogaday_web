@@ -1,0 +1,276 @@
+
+            :root {
+                --gold: #D4AF37;
+                --cream: #F5F5DC;
+                --sage: #BCB88A;
+                --charcoal: #36454F;
+                --emerald: #046307;
+            }
+            
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Cormorant Garamond', serif;
+            }
+            
+            body {
+                background-color: var(--cream);
+                color: var(--charcoal);
+                line-height: 1.6;
+            }
+            
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            
+            header {
+                background-color: var(--charcoal);
+                color: var(--gold);
+                padding: 20px 0;
+                text-align: center;
+                border-bottom: 3px solid var(--gold);
+            }
+            
+            header h1 {
+                font-size: 3rem;
+                margin-bottom: 10px;
+                letter-spacing: 2px;
+                font-weight: 400;
+            }
+            
+            header p {
+                font-size: 1.2rem;
+                font-style: italic;
+            }
+            
+            .content-slider {
+                position: relative;
+                height: 400px;
+                overflow: hidden;
+                margin: 40px 0;
+                border: 1px solid var(--gold);
+            }
+            
+            .slide {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background-color: var(--sage);
+                color: var(--charcoal);
+                padding: 20px;
+            }
+            
+            .slide.active {
+                opacity: 1;
+            }
+            
+            .slide h2 {
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+                font-weight: 400;
+                color: var(--charcoal);
+            }
+            
+            .slide p {
+                font-size: 1.2rem;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            
+            .slider-controls {
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+            }
+            
+            .slider-dot {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: var(--cream);
+                border: 1px solid var(--gold);
+                cursor: pointer;
+            }
+            
+            .slider-dot.active {
+                background-color: var(--gold);
+            }
+            
+            .section {
+                margin: 60px 0;
+                padding: 40px;
+                background-color: white;
+                border: 1px solid var(--gold);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            }
+            
+            .section h2 {
+                font-size: 2rem;
+                color: var(--emerald);
+                margin-bottom: 20px;
+                font-weight: 400;
+                text-align: center;
+                letter-spacing: 1px;
+            }
+            
+            .registration {
+                background-color: white;
+                padding: 40px;
+                border: 1px solid var(--gold);
+            }
+            
+            .form-group {
+                margin-bottom: 20px;
+            }
+            
+            label {
+                display: block;
+                margin-bottom: 8px;
+                font-size: 1.1rem;
+                color: var(--charcoal);
+            }
+            
+            input, select, textarea {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid var(--sage);
+                font-size: 1rem;
+                background-color: var(--cream);
+                color: var(--charcoal);
+            }
+            
+            button {
+                background-color: var(--emerald);
+                color: white;
+                border: none;
+                padding: 12px 24px;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                font-family: 'Cormorant Garamond', serif;
+                letter-spacing: 1px;
+            }
+            
+            button:hover {
+                background-color: var(--gold);
+            }
+            
+            .toggle-btn {
+                display: block;
+                margin: 20px auto;
+                background-color: var(--charcoal);
+            }
+            
+            .hidden {
+                display: none;
+            }
+            
+            #registrationData {
+                margin-top: 40px;
+                padding: 20px;
+                background-color: var(--cream);
+                border: 1px solid var(--gold);
+            }
+            
+            #billGeneration {
+                margin-top: 40px;
+            }
+            
+            .bill {
+                background-color: white;
+                padding: 40px;
+                border: 2px solid var(--gold);
+                max-width: 600px;
+                margin: 0 auto;
+                position: relative;
+            }
+            
+            .bill::before {
+                content: "";
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+                border: 1px solid var(--gold);
+                pointer-events: none;
+            }
+            
+            .bill h3 {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 1.8rem;
+                color: var(--emerald);
+                font-weight: 400;
+            }
+            
+            .bill-info {
+                margin-bottom: 30px;
+            }
+            
+            .bill-row {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                border-bottom: 1px dotted var(--sage);
+                padding-bottom: 5px;
+            }
+            
+            .total {
+                font-weight: bold;
+                font-size: 1.2rem;
+                margin-top: 20px;
+                text-align: right;
+            }
+            
+            .confirmation-code {
+                text-align: center;
+                margin-top: 40px;
+                font-size: 1.8rem;
+                letter-spacing: 2px;
+                font-weight: bold;
+                color: var(--emerald);
+                padding: 10px;
+                border: 2px solid var(--gold);
+                background-color: var(--cream);
+                display: inline-block;
+            }
+            
+            footer {
+                background-color: var(--charcoal);
+                color: var(--gold);
+                text-align: center;
+                padding: 20px 0;
+                margin-top: 60px;
+                border-top: 3px solid var(--gold);
+            }
+            
+            @media screen and (max-width: 768px) {
+                header h1 {
+                    font-size: 2rem;
+                }
+                
+                .slide h2 {
+                    font-size: 1.8rem;
+                }
+                
+                .section {
+                    padding: 20px;
+                }
+            }
