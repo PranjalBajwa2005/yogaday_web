@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Yoga Day</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>International Yoga Day</h1>
+            <p>Harmony of Mind, Body, and Spirit</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Content Slider -->
+        <div class="content-slider">
+            <div class="slide active">
+                <h2>Welcome to International Yoga Day</h2>
+                <p>Join us for an exclusive celebration of yoga and mindfulness on June 21st. Experience transformative sessions with world-renowned instructors in a serene atmosphere.</p>
+            </div>
+            <div class="slide">
+                <h2>Exclusive Yoga Retreats</h2>
+                <p>Discover our premium retreats combining ancient yoga practices with modern wellness techniques. Limited spots available for personalized sessions with master yogis.</p>
+            </div>
+            <div class="slide">
+                <h2>Luxury Yoga Accessories</h2>
+                <p>Enhance your practice with our curated collection of premium yoga accessories. Hand-crafted mats, meditation cushions, and wellness essentials designed for the discerning practitioner.</p>
+            </div>
+            <div class="slider-controls">
+                <div class="slider-dot active" data-slide="0"></div>
+                <div class="slider-dot" data-slide="1"></div>
+                <div class="slider-dot" data-slide="2"></div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Register for Our Exclusive Event</h2>
+            
+            <button id="toggleForm" class="toggle-btn">Show Registration Form</button>
+            
+            <div id="registrationForm" class="registration hidden">
+                <form id="yogaForm">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="16" max="99" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="category">Category:</label>
+                        <select id="category" name="category" required>
+                            <option value="">Select Category</option>
+                            <option value="regular">Regular</option>
+                            <option value="employee">Government Employee</option>
+                            <option value="student">Student</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="experience">Yoga Experience Level:</label>
+                        <select id="experience" name="experience" required>
+                            <option value="">Select Experience Level</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="package">Event Package:</label>
+                        <select id="package" name="package" required>
+                            <option value="">Select Package</option>
+                            <option value="basic" data-price="5000">Basic Package (₹5,000)</option>
+                            <option value="premium" data-price="10000">Premium Package (₹10,000)</option>
+                            <option value="luxury" data-price="25000">Luxury Retreat Package (₹25,000)</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+            
+            <div id="registrationData" class="hidden">
+                <h3>Registration Details</h3>
+                <div id="regDetails"></div>
+                
+                <div id="billGeneration">
+                    <div class="bill">
+                        <h3>Yoga Day Event - Billing Details</h3>
+                        <div class="bill-info">
+                            <div class="bill-row">
+                                <span>Name:</span>
+                                <span id="billName"></span>
+                            </div>
+                            <div class="bill-row">
+                                <span>Email:</span>
+                                <span id="billEmail"></span>
+                            </div>
+                            <div class="bill-row">
+                                <span>Package:</span>
+                                <span id="billPackage"></span>
+                            </div>
+                            <div class="bill-row">
+                                <span>Original Price:</span>
+                                <span id="billOriginalPrice"></span>
+                            </div>
+                            <div class="bill-row">
+                                <span>Discount:</span>
+                                <span id="billDiscount"></span>
+                            </div>
+                            <div class="total">
+                                <span>Final Price:</span>
+                                <span id="billFinalPrice"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="confirmation-code-container" style="text-align: center;">
+                            <p>Your Confirmation Code:</p>
+                            <div class="confirmation-code" id="confirmationCode"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>International Yoga Day &copy; 2025 | Elegance. Tranquility. Transformation.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
